@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Script from 'next/script';
 import Navigation from '../components/Navigation';
+import About from '../sections/About';
 import Hero from '../sections/Hero';
 
 const App: NextPage = () => {
@@ -53,6 +54,7 @@ const App: NextPage = () => {
       ></Script>
       <Navigation />
       <Hero />
+      <About />
     </>
   );
 };
