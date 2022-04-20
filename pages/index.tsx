@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Script from 'next/script';
 import Navigation from '../components/Navigation';
+import Hero from '../sections/Hero';
 
 const App: NextPage = () => {
   return (
@@ -51,6 +52,7 @@ const App: NextPage = () => {
         }}
       ></Script>
       <Navigation />
+      <Hero />
     </>
   );
 };

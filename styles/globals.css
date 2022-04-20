@@ -11,6 +11,10 @@ body {
   color: var(--color-text);
 }
 
+*::selection {
+  @apply bg-primary;
+}
+
 /* Light Mode */
 :root {
   --color-background: #fff;
@@ -46,5 +50,11 @@ body {
   }
   .gradient {
     background: linear-gradient(180.27deg, #ff385c 0.24%, #5200ff 204.57%);
+  }
+  .h-21 {
+    height: 5.25rem;
+  }
+  .w-wave {
+    width: 150%;
   }
 }

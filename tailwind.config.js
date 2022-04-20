@@ -2,12 +2,14 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './sections/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     colors: {
       background: 'var(--color-background)',
       'background-2': 'var(--color-background-2)',
       text: 'var(--color-text)',
+      wave: 'var(---color-wave)',
       white: '#fff',
       black: '#000',
       gray: '#ccc',
