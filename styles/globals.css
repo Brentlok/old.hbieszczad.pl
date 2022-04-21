@@ -58,6 +58,14 @@ body {
     background: linear-gradient(180.27deg, #ff385c 0.24%, #5200ff 204.57%);
   }
 
+  .gradient-half {
+    background: linear-gradient(
+      180.27deg,
+      rgba(255, 56, 92, 0.5) 0.24%,
+      rgba(82, 0, 255, 0.5) 204.57%
+    );
+  }
+
   .h-21 {
     height: 5.25rem;
   }
@@ -72,5 +80,9 @@ body {
 
   .pb-full {
     padding-bottom: 100%;
+  }
+
+  .pb-1\/5 {
+    padding-bottom: 20%;
   }
 }

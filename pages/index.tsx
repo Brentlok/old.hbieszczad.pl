@@ -1,14 +1,17 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Script from 'next/script';
-import Navigation from '../components/Navigation';
-import About from '../sections/About';
-import Hero from '../sections/Hero';
-import Projects from '../sections/Projects';
+
 import { theme_script } from '../utils/theme_script';
 import { getData } from '../utils/getProjects';
 import type { Context } from '../context';
 import { DataContext } from '../context';
+
+import Navigation from '../components/Navigation';
+import About from '../sections/About';
+import Hero from '../sections/Hero';
+import Projects from '../sections/Projects';
+import Contact from '../sections/Contact';
 
 export async function getStaticProps() {
   const { allProjects, description } = await getData();
@@ -38,6 +41,7 @@ const App: NextPage<Context> = (staticProps) => {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </DataContext.Provider>
   );
 };
