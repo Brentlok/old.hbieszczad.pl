@@ -54,6 +54,10 @@ body {
     @apply relative h-screen -z-10 pt-28 pl-8 right-6 -translate-y-14  peer-checked:-translate-x-full transition-transform bg-background-2 duration-500  flex flex-col gap-8;
   }
 
+  .scroll-position {
+    @apply w-full h-2 gradient absolute -bottom-3 rounded-t-full;
+  }
+
   .gradient {
     background: linear-gradient(180.27deg, #ff385c 0.24%, #5200ff 204.57%);
   }

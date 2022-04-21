@@ -11,7 +11,7 @@ interface IconProps {
 const Icon: NextPage<IconProps> = ({ icon, action }) => (
   <li
     onClick={action}
-    className="w-1/5 pb-1/5 rounded-full overflow-hidden relative cursor-pointer hover:scale-110 transition duration-300"
+    className="w-1/5 pb-1/5 rounded-full overflow-hidden relative cursor-pointer"
   >
     <div className="w-full h-full gradient-half absolute p-1 lg:p-2">
       <div className="w-full h-full bg-background-2 rounded-full flex justify-center items-center">
@@ -30,7 +30,10 @@ const Icon: NextPage<IconProps> = ({ icon, action }) => (
 );
 
 const Contact: NextPage = () => (
-  <footer className="w-full bg-background-2 py-6 flex flex-col items-center">
+  <footer
+    className="w-full bg-background-2 py-6 flex flex-col items-center"
+    id="contact"
+  >
     <h1 className="font-bold text-3xl lg:text-6xl">Kontakt</h1>
     <ul className="flex justify-between w-1/2 my-8 max-w-lg">
       <Icon

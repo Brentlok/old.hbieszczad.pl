@@ -3,7 +3,10 @@ import GithubIcon from '../components/GithubIcon';
 import ProjectsList from '../components/ProjectsList';
 
 const Projects: NextPage = () => (
-  <section className="flex items-center flex-col w-full px-4 lg:px-0 lg:w-5/6 m-auto py-16">
+  <section
+    className="flex items-center flex-col w-full px-4 lg:px-0 lg:w-5/6 m-auto py-16"
+    id="projects"
+  >
     <h1 className="font-bold text-3xl lg:text-6xl">Moje projekty</h1>
     <ProjectsList />
     <div

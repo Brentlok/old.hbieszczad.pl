@@ -41,7 +41,10 @@ const HeroWave: NextPage = () => (
 );
 
 const Hero: NextPage = () => (
-  <section className="relative h-screen flex justify-center items-center">
+  <section
+    className="relative h-screen flex justify-center items-center"
+    id="hero"
+  >
     <div className="w-full flex flex-col-reverse -translate-y-10 lg:flex-row px-14 justify-between">
       <p className="w-full text-2xl text-center my-6 lg:text-left lg:my-0 lg:mt-10 lg:w-2/3 lg:text-4xl xl:text-5xl 2xl:text-6xl">
         Zajmuję się tworzeniem aplikacji webowych i mobilnych
