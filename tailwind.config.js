@@ -15,6 +15,7 @@ module.exports = {
       gray: '#ccc',
       primary: '#ff385c',
       transparent: 'rgba(0,0,0,0)',
+      dark: 'rgba(0,0,0,0.6)',
     },
   },
   plugins: [],

@@ -33,28 +33,44 @@ body {
   .slider {
     @apply rounded-full absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray transition duration-300 before:rounded-full before:absolute before:h-9 before:w-9 before:bg-white before:transition before:duration-300 before:border-4 before:border-gray before:border-solid before:-left-2 before:-top-1.5;
   }
+
   .active-before {
     @apply translate-x-11 border-primary shadow-primary;
   }
+
   .hamburger {
     @apply w-14 h-2 bg-text rounded-full absolute transition duration-300;
   }
+
   .hamburger-before {
     @apply hamburger top-4 peer-checked:-rotate-45 peer-checked:-translate-y-4;
   }
+
   .hamburger-after {
     @apply hamburger bottom-4 peer-checked:rotate-45 peer-checked:translate-y-4;
   }
+
   .hamburger-navigation {
     @apply relative h-screen -z-10 pt-28 pl-8 right-6 -translate-y-14  peer-checked:-translate-x-full transition-transform bg-background-2 duration-500  flex flex-col gap-8;
   }
+
   .gradient {
     background: linear-gradient(180.27deg, #ff385c 0.24%, #5200ff 204.57%);
   }
+
   .h-21 {
     height: 5.25rem;
   }
+
   .w-wave {
     width: 150%;
+  }
+
+  .right-menu {
+    right: -60%;
+  }
+
+  .pb-full {
+    padding-bottom: 100%;
   }
 }

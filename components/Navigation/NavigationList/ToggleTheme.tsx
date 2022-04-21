@@ -5,8 +5,6 @@ import { useCallback, useState } from 'react';
 
 const ToggleTheme: NextPage = () => {
   if (typeof window === 'undefined' || typeof window.__theme === 'undefined') {
-    // Never server-side render this, since we can't determine
-    // the correct initial state until we get to the client.
     return null;
   }
 
@@ -30,7 +28,7 @@ const ToggleTheme: NextPage = () => {
         onChange={handleChange}
       />
       <span className="slider peer-checked:bg-primary peer-checked:before:active-before"></span>
-      <div className="absolute top-0 h-6 left-9 flex justify-center items-center peer-checked:left-3">
+      <div className="absolute pointer-events-none top-0 h-6 left-9 flex justify-center items-center peer-checked:left-3">
         <Image
           src={isDark ? '/assets/dark.svg' : '/assets/light.svg'}
           alt=""

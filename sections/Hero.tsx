@@ -14,11 +14,11 @@ const HeroImage: NextPage = () => (
 );
 
 const HeroMore: NextPage = () => (
-  <div className="w-full flex flex-col items-center absolute bottom-8">
+  <div className="w-full flex flex-col items-center absolute bottom-20 md:bottom-8">
     <p className="text-xl lg:text-3xl">Dowiedz się więcej!</p>
     <div className="w-11 h-24 gradient rounded-full mt-6 flex items-center justify-center relative">
       <div className="w-5 h-5 bg-primary absolute rounded-full top-6"></div>
-      <div className="w-8 h-21 bg-background-2 rounded-full"></div>
+      <div className="w-8 h-21 bg-background lg:bg-background-2 rounded-full"></div>
     </div>
   </div>
 );
@@ -40,19 +40,17 @@ const HeroWave: NextPage = () => (
   </div>
 );
 
-const Hero: NextPage = () => {
-  return (
-    <section className="relative h-screen flex justify-center items-center">
-      <div className="w-full flex flex-col-reverse -translate-y-10 lg:flex-row px-14 justify-between">
-        <p className="w-full text-2xl text-center my-6 lg:text-left lg:my-0 lg:mt-10 lg:w-2/3 lg:text-4xl xl:text-5xl 2xl:text-6xl">
-          Zajmuję się tworzeniem aplikacji webowych i mobilnych
-        </p>
-        <HeroImage />
-      </div>
-      <HeroWave />
-      <HeroMore />
-    </section>
-  );
-};
+const Hero: NextPage = () => (
+  <section className="relative h-screen flex justify-center items-center">
+    <div className="w-full flex flex-col-reverse -translate-y-10 lg:flex-row px-14 justify-between">
+      <p className="w-full text-2xl text-center my-6 lg:text-left lg:my-0 lg:mt-10 lg:w-2/3 lg:text-4xl xl:text-5xl 2xl:text-6xl">
+        Zajmuję się tworzeniem aplikacji webowych i mobilnych
+      </p>
+      <HeroImage />
+    </div>
+    <HeroWave />
+    <HeroMore />
+  </section>
+);
 
 export default Hero;
