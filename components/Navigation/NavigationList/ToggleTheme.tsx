@@ -4,18 +4,26 @@ import Image from 'next/image';
 import { useCallback, useState } from 'react';
 
 const ToggleTheme: NextPage = () => {
-  if (typeof window === 'undefined' || typeof window.__theme === 'undefined') {
+  const themedWindow = window as any;
+
+  if (
+    typeof window === 'undefined' ||
+    typeof themedWindow.__theme === 'undefined'
+  ) {
     return null;
   }
 
-  const [isDark, setIsDark] = useState(window.__theme.toString() === 'dark');
+  const [isDark, setIsDark] = useState(
+    themedWindow.__theme.toString() === 'dark'
+  );
 
   const handleChange = useCallback(
     (e: any) => {
       const isChecked = e.target.checked;
       setIsDark(isChecked);
-      window.__setPreferredTheme(isChecked ? 'dark' : 'light');
+      themedWindow.__setPreferredTheme(isChecked ? 'dark' : 'light');
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [setIsDark]
   );
 
