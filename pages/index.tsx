@@ -6,20 +6,20 @@ import About from '../sections/About';
 import Hero from '../sections/Hero';
 import Projects from '../sections/Projects';
 import { theme_script } from '../utils/theme_script';
-import { getProjects } from '../utils/getProjects';
+import { getData } from '../utils/getProjects';
 import type { Context } from '../context';
 import { DataContext } from '../context';
 
 export async function getStaticProps() {
-  const { allProjects } = await getProjects();
+  const { allProjects, description } = await getData();
   return {
-    props: { allProjects },
+    props: { allProjects, description },
   };
 }
 
-const App: NextPage<Context> = ({ allProjects }) => {
+const App: NextPage<Context> = (staticProps) => {
   return (
-    <DataContext.Provider value={{ allProjects }}>
+    <DataContext.Provider value={staticProps}>
       <Head>
         <title>Hubert Bieszczad | Frontend Developer</title>
         <meta

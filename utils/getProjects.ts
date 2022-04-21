@@ -1,8 +1,13 @@
 import { GraphQLClient } from 'graphql-request';
+import { Context } from '../context';
 
 const query = `
 {
+  description {
+    data
+  }
   allProjects(orderBy: year_DESC) {
+    id
     title
     year
     description
@@ -17,7 +22,7 @@ const query = `
   }
 }`;
 
-export function getProjects() {
+export function getData(): Promise<Context> {
   const endpoint = 'https://graphql.datocms.com/';
   const client = new GraphQLClient(endpoint, {
     headers: {

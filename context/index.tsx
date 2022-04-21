@@ -17,10 +17,16 @@ export interface ProjectInterface {
 
 export interface Context {
   allProjects: ProjectInterface[];
+  description: {
+    data: string;
+  };
 }
 
 const defaultContext: Context = {
   allProjects: [],
+  description: {
+    data: '',
+  },
 };
 
 export const DataContext = createContext(defaultContext);
