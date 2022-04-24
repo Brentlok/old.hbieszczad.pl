@@ -3,7 +3,7 @@ import { createContext } from 'react';
 export interface ProjectInterface {
   id: number;
   title: string;
-  year: number;
+  date: string;
   description: string;
   technologies: string;
   image: {

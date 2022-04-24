@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 
 import { theme_script } from '../utils/theme_script';
-import { getData } from '../utils/getProjects';
+import { getData } from '../utils/getData';
 import type { Context } from '../context';
 import { DataContext } from '../context';
 

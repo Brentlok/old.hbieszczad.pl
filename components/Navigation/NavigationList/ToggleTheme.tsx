@@ -4,12 +4,13 @@ import Image from 'next/image';
 import { useCallback, useState } from 'react';
 
 const ToggleTheme: NextPage = () => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   const themedWindow = window as any;
 
-  if (
-    typeof window === 'undefined' ||
-    typeof themedWindow.__theme === 'undefined'
-  ) {
+  if (typeof themedWindow.__theme === 'undefined') {
     return null;
   }
 

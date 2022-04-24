@@ -6,7 +6,7 @@ import type { ProjectInterface } from '../../context';
 const Project: NextPage<ProjectInterface> = (props) => {
   const {
     title,
-    year,
+    date,
     image,
     description,
     technologies,
@@ -34,20 +34,22 @@ const Project: NextPage<ProjectInterface> = (props) => {
           />
         ))}
       </div>
-      <div
-        className="w-11/12 h-12 rounded-full gradient mx-auto flex justify-center items-center cursor-pointer mb-4"
-        onClick={() => open(linkHref)}
-      >
-        <p className="font-semibold text-sm">{linkName}</p>
-        <div className="absolute right-14 flex justify-center items-center">
-          <Image
-            width={32}
-            height={32}
-            src={`/assets/icons/${linkIcon || 'link'}.svg`}
-            alt={linkIcon || 'link'}
-          />
+      {linkName && (
+        <div
+          className="w-11/12 h-12 rounded-full gradient mx-auto flex justify-center items-center cursor-pointer mb-4"
+          onClick={() => open(linkHref)}
+        >
+          <p className="font-semibold text-sm">{linkName}</p>
+          <div className="absolute right-14 flex justify-center items-center">
+            <Image
+              width={32}
+              height={32}
+              src={`/assets/icons/${linkIcon || 'link'}.svg`}
+              alt={linkIcon || 'link'}
+            />
+          </div>
         </div>
-      </div>
+      )}
       {github && (
         <div
           className="w-11/12 h-12 rounded-full bg-background mx-auto flex justify-center items-center cursor-pointer"
@@ -63,10 +65,10 @@ const Project: NextPage<ProjectInterface> = (props) => {
   );
 
   return (
-    <div className="text-center">
+    <div className="text-center mt-6 md:mt-0">
       <h1 className="font-bold text-2xl lg:text-3xl">{title}</h1>
       <hr className="border-t-2 mx-auto my-2 w-20 lg:w-32" />
-      <h2 className="font-bold text-xl lg:text-2xl mb-4">{year}</h2>
+      <h2 className="font-bold text-xl lg:text-2xl mb-4">{date.slice(0, 4)}</h2>
       <div className="w-full pb-full rounded-xl overflow-hidden relative group">
         <div className="w-full h-full absolute">
           <Image

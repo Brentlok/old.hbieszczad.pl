@@ -6,10 +6,10 @@ const query = `
   description {
     data
   }
-  allProjects(orderBy: year_DESC) {
+  allProjects(orderBy: date_DESC) {
     id
     title
-    year
+    date
     description
     technologies
     image {
