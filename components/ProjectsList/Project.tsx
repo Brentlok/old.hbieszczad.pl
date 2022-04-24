@@ -20,9 +20,9 @@ const Project: NextPage<ProjectInterface> = (props) => {
   };
 
   const ProjectHover: NextPage = () => (
-    <div className="opacity-0 group-hover:opacity-100 transition duration-300 absolute z-10 bg-dark w-full h-full px-5 py-10">
+    <div className="opacity-0 group-hover:opacity-100 transition duration-300 absolute z-10 bg-dark w-full h-full px-5 py-10 flex flex-col justify-between">
       <p className="text-left text-white">{description}</p>
-      <div className="flex justify-center gap-6 my-10">
+      <div className="flex justify-center gap-6">
         {technologies.split('\n').map((tech) => (
           <img
             key={tech}
@@ -33,39 +33,43 @@ const Project: NextPage<ProjectInterface> = (props) => {
           />
         ))}
       </div>
-      {linkName && (
-        <div
-          className="w-11/12 h-12 rounded-full gradient mx-auto flex justify-center items-center cursor-pointer mb-4"
-          onClick={() => open(linkHref)}
-        >
-          <p className="font-semibold text-sm">{linkName}</p>
-          <div className="absolute right-14 flex justify-center items-center">
-            <img
-              width={32}
-              height={32}
-              src={`/assets/icons/${linkIcon || 'link'}.svg`}
-              alt={linkIcon || 'link'}
-            />
+      <div>
+        {linkName && (
+          <div
+            className="w-11/12 h-12 rounded-full gradient mx-auto flex justify-center items-center cursor-pointer mb-4"
+            onClick={() => open(linkHref)}
+          >
+            <p className="font-semibold text-sm text-white">{linkName}</p>
+            <div className="absolute right-14 hidden md:flex justify-center items-center">
+              <img
+                width={32}
+                height={32}
+                src={`/assets/icons/${linkIcon || 'link'}.svg`}
+                alt={linkIcon || 'link'}
+              />
+            </div>
           </div>
-        </div>
-      )}
-      {github && (
-        <div
-          className="w-11/12 h-12 rounded-full bg-background mx-auto flex justify-center items-center cursor-pointer"
-          onClick={() => open(github)}
-        >
-          <p className="font-semibold text-sm">Kod źródłowy</p>
-          <div className="absolute right-14">
-            <GithubIcon small />
+        )}
+        {github && (
+          <div
+            className="w-11/12 h-12 rounded-full bg-background mx-auto flex justify-center items-center cursor-pointer"
+            onClick={() => open(github)}
+          >
+            <p className="font-semibold text-sm">Kod źródłowy</p>
+            <div className="absolute right-14">
+              <GithubIcon small />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 
   return (
     <div className="text-center mt-6 md:mt-0">
-      <h1 className="font-bold text-2xl lg:text-3xl">{title}</h1>
+      <h1 className="font-bold text-2xl lg:text-3xl whitespace-nowrap">
+        {title}
+      </h1>
       <hr className="border-t-2 mx-auto my-2 w-20 lg:w-32" />
       <h2 className="font-bold text-xl lg:text-2xl mb-4">{date.slice(0, 4)}</h2>
       <div className="w-full pb-full rounded-xl overflow-hidden relative group">
