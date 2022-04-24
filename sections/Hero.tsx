@@ -1,17 +1,4 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
-
-const HeroImage: NextPage = () => (
-  <div className="w-full lg:w-2/5">
-    <Image
-      src="/assets/hero.svg"
-      alt="hero"
-      layout="responsive"
-      width={500}
-      height={371}
-    />
-  </div>
-);
 
 const HeroMore: NextPage = () => (
   <div className="w-full flex flex-col items-center absolute bottom-20 md:bottom-8">
@@ -49,7 +36,7 @@ const Hero: NextPage = () => (
       <p className="w-full text-2xl text-center my-6 lg:text-left lg:my-0 lg:mt-10 lg:w-2/3 lg:text-4xl xl:text-5xl 2xl:text-6xl">
         Zajmuję się tworzeniem aplikacji webowych i mobilnych
       </p>
-      <HeroImage />
+      <img className="w-full lg:w-2/5" src="/assets/hero.svg" alt="hero" />
     </div>
     <HeroWave />
     <HeroMore />

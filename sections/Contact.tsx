@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 
 type Icon = 'fiverr' | 'github' | 'mail';
 
@@ -13,15 +12,11 @@ const Icon: NextPage<IconProps> = ({ icon, link }) => (
     <a target="_blank" href={link} rel="noreferrer">
       <div className="w-full h-full gradient-half absolute p-1 lg:p-2">
         <div className="w-full h-full bg-background-2 rounded-full flex justify-center items-center">
-          <div className="w-2/3 h-2/3">
-            <Image
-              src={`/assets/contact_icons/${icon}.svg`}
-              width={32}
-              height={32}
-              layout="responsive"
-              alt={icon}
-            />
-          </div>
+          <img
+            className="w-2/3 h-2/3"
+            src={`/assets/contact_icons/${icon}.svg`}
+            alt={icon}
+          />
         </div>
       </div>
     </a>

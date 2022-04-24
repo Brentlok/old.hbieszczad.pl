@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { useCallback, useState } from 'react';
 
 const ToggleTheme: NextPage = () => {
@@ -38,7 +37,7 @@ const ToggleTheme: NextPage = () => {
       />
       <span className="slider peer-checked:bg-primary peer-checked:before:active-before"></span>
       <div className="absolute pointer-events-none top-0 h-6 left-9 flex justify-center items-center peer-checked:left-3">
-        <Image
+        <img
           src={isDark ? '/assets/dark.svg' : '/assets/light.svg'}
           alt=""
           width="16"

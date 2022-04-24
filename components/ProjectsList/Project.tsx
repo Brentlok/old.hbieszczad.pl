@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import GithubIcon from '../GithubIcon';
 import type { ProjectInterface } from '../../context';
 
@@ -25,7 +24,7 @@ const Project: NextPage<ProjectInterface> = (props) => {
       <p className="text-left text-white">{description}</p>
       <div className="flex justify-center gap-6 my-10">
         {technologies.split('\n').map((tech) => (
-          <Image
+          <img
             key={tech}
             src={`/assets/icons/${tech}.svg`}
             alt={tech}
@@ -41,7 +40,7 @@ const Project: NextPage<ProjectInterface> = (props) => {
         >
           <p className="font-semibold text-sm">{linkName}</p>
           <div className="absolute right-14 flex justify-center items-center">
-            <Image
+            <img
               width={32}
               height={32}
               src={`/assets/icons/${linkIcon || 'link'}.svg`}
@@ -70,15 +69,7 @@ const Project: NextPage<ProjectInterface> = (props) => {
       <hr className="border-t-2 mx-auto my-2 w-20 lg:w-32" />
       <h2 className="font-bold text-xl lg:text-2xl mb-4">{date.slice(0, 4)}</h2>
       <div className="w-full pb-full rounded-xl overflow-hidden relative group">
-        <div className="w-full h-full absolute">
-          <Image
-            width={400}
-            height={400}
-            layout="responsive"
-            src={image.url}
-            alt={title}
-          />
-        </div>
+        <img className="w-full h-full absolute" src={image.url} alt={title} />
         <ProjectHover />
       </div>
     </div>

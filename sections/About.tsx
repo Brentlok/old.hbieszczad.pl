@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { useContext } from 'react';
 import { DataContext } from '../context';
 
@@ -15,15 +14,11 @@ const About: NextPage = () => {
         <p className="w-full px-4 text-2xl tracking-wider lg:text-3xl lg:w-2/3 lg:px-0 lg:pr-12">
           {description.data}
         </p>
-        <div className="hidden lg:block w-1/4">
-          <Image
-            src="/assets/about.svg"
-            width={300}
-            height={479}
-            layout="responsive"
-            alt="about"
-          />
-        </div>
+        <img
+          className="hidden lg:block w-1/4"
+          src="/assets/about.svg"
+          alt="about"
+        />
       </div>
     </section>
   );
