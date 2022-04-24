@@ -20,7 +20,7 @@ const Project: NextPage<ProjectInterface> = (props) => {
   };
 
   const ProjectHover: NextPage = () => (
-    <div className="opacity-0 group-hover:opacity-100 transition duration-300 absolute z-10 bg-dark w-full h-full px-5 py-10 flex flex-col justify-between">
+    <div className="opacity-0 group-hover:opacity-100 transition duration-300 absolute z-10 bg-dark w-full h-full px-5 py-5 flex flex-col justify-between">
       <p className="text-left text-white">{description}</p>
       <div className="flex justify-center gap-6">
         {technologies.split('\n').map((tech) => (
