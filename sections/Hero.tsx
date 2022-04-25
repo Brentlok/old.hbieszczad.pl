@@ -1,10 +1,14 @@
 import type { NextPage } from 'next';
+import { scrollTo } from '../utils/scrollTo';
 
 const HeroMore: NextPage = () => (
   <div className="w-full flex flex-col items-center absolute bottom-20 md:bottom-8">
     <p className="text-xl lg:text-3xl">Dowiedz się więcej!</p>
-    <div className="w-11 h-24 gradient rounded-full mt-6 flex items-center justify-center relative">
-      <div className="w-5 h-5 bg-primary absolute rounded-full top-6"></div>
+    <div
+      onClick={() => scrollTo('about')}
+      className="w-11 h-24 gradient rounded-full mt-6 flex items-center justify-center relative cursor-pointer group"
+    >
+      <div className="w-5 h-5 bg-primary absolute rounded-full top-6 group-hover:translate-y-8 transition duration-300"></div>
       <div className="w-8 h-21 bg-background lg:bg-background-2 rounded-full"></div>
     </div>
   </div>

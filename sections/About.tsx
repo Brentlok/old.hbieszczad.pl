@@ -10,7 +10,7 @@ const About: NextPage = () => {
       id="about"
     >
       <h1 className="font-bold text-3xl lg:text-6xl">O mnie</h1>
-      <div className="flex mt-16">
+      <div className="flex mt-16 justify-between">
         <p className="w-full px-4 text-2xl tracking-wider lg:text-3xl lg:w-2/3 lg:px-0 lg:pr-12">
           {description.data}
         </p>

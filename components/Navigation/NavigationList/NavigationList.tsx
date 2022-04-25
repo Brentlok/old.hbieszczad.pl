@@ -3,6 +3,7 @@ import ToggleTheme from './ToggleTheme';
 import useWindowDimensions from '../../../hooks/useWindowDimensions';
 import NavigationHamburger from './NavigationHamburger';
 import { useEffect, useState } from 'react';
+import { scrollTo } from '../../../utils/scrollTo';
 
 const list = [
   {
@@ -39,20 +40,6 @@ const NavigationList: NextPage = () => {
       window.removeEventListener('scroll', hide);
     };
   }, []);
-
-  const scrollTo = (id: string) => {
-    const section = document.querySelector(`#${id}`) as HTMLElement | null;
-    if (section === null) {
-      return;
-    }
-    const scrollY =
-      section.offsetTop - (document.querySelector('nav')?.offsetHeight || 0);
-    console.log(scrollY);
-    window.scrollTo({
-      top: scrollY,
-      behavior: 'smooth',
-    });
-  };
 
   const NavigationItems = list.map(({ name, scrollId }) => (
     <li
