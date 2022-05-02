@@ -5,88 +5,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 body {
-  transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 *::selection {
-  @apply bg-primary;
+    @apply bg-primary;
 }
 
 /* Light Mode */
 :root {
-  --color-background: #fff;
-  --color-background-2: #ececec;
-  --color-text: #000;
+    --color-background: #fff;
+    --color-background-2: #ececec;
+    --color-text: #000;
 }
 
 /* Dark Mode */
 :root.dark {
-  --color-background: #000;
-  --color-background-2: #131313;
-  --color-text: #fff;
+    --color-background: #000;
+    --color-background-2: #131313;
+    --color-text: #fff;
 }
 
 @layer components {
-  .slider {
-    @apply rounded-full absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray transition duration-300 before:rounded-full before:absolute before:h-9 before:w-9 before:bg-white before:transition before:duration-300 before:border-4 before:border-gray before:border-solid before:-left-2 before:-top-1.5;
-  }
+    .slider {
+        @apply rounded-full absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray transition duration-300 before:rounded-full before:absolute before:h-9 before:w-9 before:bg-white before:transition before:duration-300 before:border-4 before:border-gray before:border-solid before:-left-2 before:-top-1.5;
+    }
 
-  .active-before {
-    @apply translate-x-11 border-primary shadow-primary;
-  }
+    .active-before {
+        @apply translate-x-11 border-primary shadow-primary;
+    }
 
-  .hamburger {
-    @apply w-14 h-2 bg-text rounded-full absolute transition duration-300;
-  }
+    .hamburger {
+        @apply w-12 h-1.5 bg-text rounded-full absolute transition duration-300;
+    }
 
-  .hamburger-before {
-    @apply hamburger top-4 peer-checked:-rotate-45 peer-checked:-translate-y-4;
-  }
+    .hamburger-before {
+        @apply hamburger top-3 peer-checked:-rotate-45 peer-checked:-translate-y-3;
+    }
 
-  .hamburger-after {
-    @apply hamburger bottom-4 peer-checked:rotate-45 peer-checked:translate-y-4;
-  }
+    .hamburger-after {
+        @apply hamburger bottom-3 peer-checked:rotate-45 peer-checked:translate-y-3;
+    }
 
-  .hamburger-navigation {
-    @apply relative h-screen -z-10 pt-28 pl-8 right-6 -translate-y-14  peer-checked:-translate-x-full transition-transform bg-background-2 duration-500  flex flex-col gap-8;
-  }
+    .hamburger-navigation {
+        @apply relative h-screen -z-10 pt-28 pl-8 right-6 -translate-y-14  peer-checked:-translate-x-full transition-transform bg-background-2 duration-500  flex flex-col gap-8;
+    }
 
-  .scroll-position {
-    @apply w-full h-2 gradient absolute -bottom-3 rounded-t-full;
-  }
+    .scroll-position {
+        @apply w-full h-2 gradient absolute -bottom-3 rounded-t-full;
+    }
 
-  .gradient {
-    background: linear-gradient(180.27deg, #ff385c 0.24%, #5200ff 204.57%);
-  }
+    .gradient {
+        background: linear-gradient(180.27deg, #ff385c 0.24%, #5200ff 204.57%);
+    }
 
-  .gradient-half {
-    background: linear-gradient(
-      180.27deg,
-      rgba(255, 56, 92, 0.5) 0.24%,
-      rgba(82, 0, 255, 0.5) 204.57%
-    );
-  }
+    .gradient-half {
+        background: linear-gradient(
+            180.27deg,
+            rgba(255, 56, 92, 0.5) 0.24%,
+            rgba(82, 0, 255, 0.5) 204.57%
+        );
+    }
 
-  .h-21 {
-    height: 5.25rem;
-  }
+    .h-21 {
+        height: 5.25rem;
+    }
 
-  .w-wave {
-    width: 150%;
-  }
+    .w-wave {
+        width: 150%;
+    }
 
-  .right-menu {
-    right: -60%;
-  }
+    .right-menu {
+        right: -60%;
+    }
 
-  .pb-full {
-    padding-bottom: 100%;
-  }
+    .pb-full {
+        padding-bottom: 100%;
+    }
 
-  .pb-1\/5 {
-    padding-bottom: 20%;
-  }
+    .pb-1\/5 {
+        padding-bottom: 20%;
+    }
 }
